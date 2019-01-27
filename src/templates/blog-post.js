@@ -2,18 +2,21 @@ import React from 'react';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby'
+import PrevNext from '../components/prevnext';
 
 function BlogPost(props) {
 
 	const post = props.data.markdownRemark;
-	const { title, date } = post.frontmatter;
+	const { title, date, image } = post.frontmatter;
+	const { prev, next } = props.pageContext;
 
 	return (
 		<Layout>
 			<div>
 				<h1>{title}</h1>
-				<Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+				{image && <Img fluid={image.childImageSharp.fluid} />}
 				<div dangerouslySetInnerHTML={{ __html:post.html }} />
+				<PrevNext prev={prev && prev.node} next={next && next.node} />
 			</div>
 		</Layout>
 	)
