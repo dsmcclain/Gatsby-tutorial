@@ -2,7 +2,7 @@
 title: SunCountry Airlines - BODSAN at 30,000 Feet
 description: That time I wrote a letter to SunCountry Airlines
 date: '2018-12-2'
-image: ''
+image: Sun-Country-737.jpg
 tags: ['size inclusivity', 'fat activism', 'airline seats']
 ---
 
